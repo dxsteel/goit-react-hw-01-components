@@ -1,27 +1,27 @@
 import PropTypes from 'prop-types';
-import styles from './TransactionHistory.module.css'
+import styles from './TransactionHistory.module.css';
 export function TransactionHistory({ items }) {
-    return (
-<table className={styles.transactionHistory}>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
+  return (
+    <table className={styles.transactionHistory}>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    {items.map(({ type, amount, currency, id }) => (
+      <tbody>
+        {items.map(({ type, amount, currency, id }) => (
           <tr key={id}>
             <td style={{ color: getRandomHexColor() }}>{type}</td>
             <td style={{ color: getRandomHexColor() }}>{amount}</td>
             <td style={{ color: getRandomHexColor() }}>{currency}</td>
           </tr>
         ))}
-  </tbody>
-</table>
-    )
+      </tbody>
+    </table>
+  );
 }
 
 TransactionHistory.propTypes = {
