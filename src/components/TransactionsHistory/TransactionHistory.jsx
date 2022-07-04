@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './TransactionHistory.module.css';
-export function TransactionHistory({ items }) {
+
+const TransactionHistory = ({ items }) => {
   return (
     <table className={styles.transactionHistory}>
       <thead>
@@ -38,3 +39,5 @@ TransactionHistory.propTypes = {
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
+export default TransactionHistory;

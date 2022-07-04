@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './Statistics.module.css';
 
-export function Statistics({ title, stats }) {
+const Statistics = ({ title, stats }) => {
   return (
     <div className={styles.container}>
       <section className={styles.statistics}>
@@ -37,3 +37,5 @@ Statistics.propTypes = {
     })
   ),
 };
+
+export default Statistics;

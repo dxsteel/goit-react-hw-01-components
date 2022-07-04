@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './FriendList.module.css';
 
-export function FriendList({ friends }) {
+const FriendList = ({ friends }) => {
   return (
     <ul className={styles.friendList}>
       {friends.map(({ avatar, name, isOnline, id }) => (
@@ -44,3 +44,5 @@ FriendsListItem.propTypes = {
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
 };
+
+export default FriendList;
